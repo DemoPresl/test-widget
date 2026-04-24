@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Тест виджета BPMSoft</title>
     
-    <link rel="stylesheet" href="https://bpmsoft-oc-widget1.corporate-domain.ru/3.1/widget.css">
+    <!-- Стили виджета (реальный URL) -->
+    <link rel="stylesheet" href="https://bpmsoft-oc-widget1.cloudbpm.ru/3.2/widget.css">
     
     <style>
         body {
@@ -34,16 +35,20 @@
         <p>Если виджета нет — нажмите F12 и проверьте консоль.</p>
     </div>
 
+    <!-- Контейнер виджета -->
     <div id="bpmsoftocc-chat"></div>
 
-    <script>
+    <!-- Настройки виджета -->
+    <script> 
         window.bpmsoftoccconfig = {};
-        window.bpmsoftoccconfig.channelId = '5f0b2f7b-8ca2-47fe-88eb-312bd3dc641a';
-        window.bpmsoftoccconfig.title = 'DemoPresl';  // ← Замените на нужное название
+        window.bpmsoftoccconfig.channelId = '43e03ab5-ac40-4082-81bf-3a8c15003522';
+        window.bpmsoftoccconfig.connectorUrl = 'https://bpmsoft-oc-connector1.cloudbpm.ru';
+        window.bpmsoftoccconfig.title = 'DemoPresl';  // ← Название компании
     </script>
 
-    <script src="https://bpmsoft-oc-widget1.corporate-domain.ru/3.1/widget.js" async></script>
-    <script src="https://bpmsoft-oc-widget1.corporate-domain.ru/3.1/chunk-vendors.js" async></script>
+    <!-- Скрипты виджета (реальные URL) -->
+    <script src="https://bpmsoft-oc-widget1.cloudbpm.ru/3.2/widget.js" async></script>
+    <script src="https://bpmsoft-oc-widget1.cloudbpm.ru/3.2/chunk-vendors.js" async></script>
 
 </body>
 </html>
