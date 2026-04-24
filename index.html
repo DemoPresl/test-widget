@@ -9,23 +9,111 @@
     <link rel="stylesheet" href="https://bpmsoft-oc-widget1.cloudbpm.ru/3.2/widget.css">
     
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            min-height: 100vh;
-            background: #f0f2f5;
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* ========== ФОН ВСЕЙ СТРАНИЦЫ ========== */
+    body {
+        font-family: Arial, sans-serif;
+        min-height: 100vh;
+
+        /* Меняйте здесь: цвет, градиент или картинку */
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    /* ========== КАРТОЧКА ПО ЦЕНТРУ ========== */
+    .content {
+        max-width: 600px;
+        width: 100%;
+        padding: 40px;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-radius: 16px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        text-align: center;
+    }
+
+    .content .icon {
+        font-size: 48px;
+        margin-bottom: 16px;
+    }
+
+    h1 {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 12px;
+    }
+
+    p {
+        color: #666;
+        margin-bottom: 8px;
+        font-size: 14px;
+    }
+
+    .badge {
+        display: inline-block;
+        background: #e8f5e9;
+        color: #2e7d32;
+        padding: 6px 16px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: bold;
+        margin-top: 12px;
+    }
+
+    /* ========== ФОН САМОГО ВИДЖЕТА (ОБЛАСТЬ ЧАТА) ========== */
+    div#bpmsoftoccchat-main-feed {
+        background-color: #f8f9ff !important;
+        /* Для картинки раскомментируйте:
+        background: url('https://demo-presl.github.io/test-widget/chat-bg.png') center/cover no-repeat !important;
+        */
+    }
+
+    /* ========== ФОН ШАПКИ ВИДЖЕТА ========== */
+    #bpmsoftoccchat-container .bpmsoftoccchat-conversation-body-profile {
+        background: linear-gradient(135deg, #667eea, #764ba2) !important;
+    }
+
+    /* ========== ФОН СООБЩЕНИЙ ========== */
+    .bpmsoftoccchat-comment {
+        background: #eef2ff !important;
+        border-radius: 12px !important;
+    }
+
+    /* Сообщения оператора */
+    .bpmsoftoccchat-comment-container-admin .bpmsoftoccchat-comment {
+        background: #e8f0fe !important;
+    }
+
+    /* Сообщения клиента (пользователя) */
+    .bpmsoftoccchat-comment-container-user .bpmsoftoccchat-comment {
+        background: #d4edda !important;
+    }
+
+    /* ========== СИСТЕМНОЕ СООБЩЕНИЕ "С ВАМИ ОБЩАЕТСЯ..." ========== */
+    .bpmsoftoccchat-operatorinfo-message {
+        background-color: #ff6161 !important;
+    }
+
+    .bpmsoftoccchat-operatorinfo-message-phrase {
+        color: #ffffff !important;
+    }
+
+    /* ========== АДАПТИВ ДЛЯ МОБИЛЬНЫХ ========== */
+    @media screen and (max-width: 980px) {
+        div#bpmsoftoccchat-main-feed {
+            background-color: rgba(248, 249, 255, 0.95) !important;
         }
-        .content {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            background: white;
-            border-radius: 8px;
-        }
-        h1 { font-size: 20px; }
-        p { color: #666; }
-    </style>
+    }
+</style>
 </head>
 <body>
 
