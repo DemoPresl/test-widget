@@ -54,6 +54,13 @@
         window.bpmsoftoccconfig.connectorUrl = 'https://bpmsoft-oc-connector1.cloudbpm.ru';
         window.bpmsoftoccconfig.title = 'DemoPresl';
         
+        // Идентификатор клиента
+        window.bpmsoftoccconfig.clientId = 'DemoUser-123';
+        document.cookie = `bpmsoftocc:${window.bpmsoftoccconfig.channelId.toUpperCase()}=${window.bpmsoftoccconfig.clientId}`;
+        
+        // Время хранения сессии (50 минут = 3000000 мс)
+        window.bpmsoftoccconfig.cookieSessionTime = 3000000;
+        
         // Выбор каналов
         window.bpmsoftoccconfig.showChannelPanel = true;
         window.bpmsoftoccconfig.channelPanelHeader = 'Выберите канал для продолжения общения';
