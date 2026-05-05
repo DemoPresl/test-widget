@@ -14,8 +14,8 @@
             background: url('bg.jpg') center/cover no-repeat fixed;
         }
 
-        /* ========== ЦВЕТА ВИДЖЕТА ========== */
-        
+        /* ========== ЦВЕТА ВИДЖЕТА (раскомментируйте для изменений) ========== */
+        /*
         #bpmsoftoccchat-container .bpmsoftoccchat-conversation-body-profile {
             background: #4d1965 !important;
         }
@@ -39,6 +39,7 @@
         .bpmsoftoccchat-comment p {
             color: #333333 !important;
         }
+        */
     </style>
 </head>
 <body>
@@ -58,7 +59,7 @@
         window.bpmsoftoccconfig.clientId = 'DemoUser-123';
         document.cookie = `bpmsoftocc:${window.bpmsoftoccconfig.channelId.toUpperCase()}=${window.bpmsoftoccconfig.clientId}`;
         
-        // Время хранения сессии (50 минут = 3000000 мс)
+        // Время хранения сессии
         window.bpmsoftoccconfig.cookieSessionTime = 3000000;
         
         // Выбор каналов
