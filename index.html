@@ -11,8 +11,13 @@
     <style>
         /* ========== ФОН СТРАНИЦЫ ========== */
         body {
-            background: url('bg.jpg') center/cover no-repeat fixed;
-        }
+    /* Фон страницы */
+    background: url('bg.jpg') no-repeat center top fixed;
+    /* Цвет подложки на случай, если картинка не загрузится или кончится */
+    background-color: #e9ecef;
+    /* Фон будет подстраиваться под ширину экрана (не более 100%) */
+    background-size: 100% auto;
+}
 
         /* ========== ЦВЕТА ВИДЖЕТА (раскомментируйте для изменений) ========== */
         /*
