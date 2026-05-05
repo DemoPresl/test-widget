@@ -5,43 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Тест виджета BPMSoft</title>
     
-    <!-- Стили виджета (реальный URL) -->
+    <!-- Стили виджета -->
     <link rel="stylesheet" href="https://bpmsoft-oc-widget1.cloudbpm.ru/3.2/widget.css">
     
-        <style>
+    <style>
         /* ========== ФОН СТРАНИЦЫ ========== */
         body {
             background: url('bg.jpg') center/cover no-repeat fixed;
         }
 
-        /* ========== МЕНЯЙТЕ ЦВЕТА ЗДЕСЬ ========== */
+        /* ========== ЦВЕТА ВИДЖЕТА ========== */
         
-        /* Цвет шапки виджета */
         #bpmsoftoccchat-container .bpmsoftoccchat-conversation-body-profile {
             background: #4d1965 !important;
         }
 
-        /* Цвет фона всего чата */
         div#bpmsoftoccchat-main-feed {
             background-color: #f5f5f5 !important;
         }
 
-        /* Цвет сообщений */
         .bpmsoftoccchat-comment {
             background: #ffffff !important;
         }
 
-        /* Цвет кнопки открытия виджета */
         .bpmsoftoccchat-widget-startbutton {
             background: #F9763D !important;
         }
 
-        /* Цвет кнопки отправки */
         .bpmsoftoccchat-send-button {
             background: #F9763D !important;
         }
 
-        /* Цвет текста в сообщениях */
         .bpmsoftoccchat-comment p {
             color: #333333 !important;
         }
@@ -49,15 +43,32 @@
 </head>
 <body>
 
-    <!-- Контейнер виджета -->
     <div id="bpmsoftocc-chat"></div>
 
     <!-- Настройки виджета -->
     <script> 
         window.bpmsoftoccconfig = {};
+        
+        // Основные настройки
         window.bpmsoftoccconfig.channelId = '43e03ab5-ac40-4082-81bf-3a8c15003522';
         window.bpmsoftoccconfig.connectorUrl = 'https://bpmsoft-oc-connector1.cloudbpm.ru';
         window.bpmsoftoccconfig.title = 'DemoPresl';
+        
+        // Выбор каналов
+        window.bpmsoftoccconfig.showChannelPanel = true;
+        window.bpmsoftoccconfig.channelPanelHeader = 'Выберите канал для продолжения общения';
+        window.bpmsoftoccconfig.backToChannelChooseCaption = 'Вернуться к списку каналов';
+        window.bpmsoftoccconfig.channelsInPanel = [
+            { type: "widget", name: "Продолжить на сайте" },
+            { type: "telegram", name: "Telegram", link: "" },
+            { type: "whatsapp", name: "WhatsApp", link: "" }
+        ];
+        
+        // Надписи
+        window.bpmsoftoccconfig.chatMessagePlaceholder = 'Введите сообщение...';
+        window.bpmsoftoccconfig.closeChatCaption = 'Свернуть';
+        window.bpmsoftoccconfig.chatButtonsPlaceholder = 'Выберите один из вариантов';
+        window.bpmsoftoccconfig.initialMessageText = 'Клиент открыл чат';
     </script>
 
     <!-- Скрипты виджета -->
